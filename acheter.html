@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap css -->
+    <!-- index css -->
+    <link rel="stylesheet" href="css/acheter.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--<script src="js/all.js">
+    </script>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      
+    <title>Acheter</title>
+    </head>
+    <body>
+        <!--Nav bar-->
+        <div class="container">
+            <div class="row"id="title" onclick="location.href='index.html';">
+                <h1>Cars</h1><h3>.ma</h3>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-radius: 22px;">
+                <a class="navbar-brand" id="home"href="index.html"><img src="img/home.svg" alt="home" width="35px" height="35px"> <span class="sr-only">(current)</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto topnav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="vendre.html">Deposez Vos annonces</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="acheter.html">Acheter une voiture</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="about.html">Contactez Nous</a>
+                        </li>
+                        <li class="nav-item connection-btns">
+                            <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Se connecter</a>                  
+                        </li>
+                        <li class="nav-item connection-btns">
+                            <a class="nav-link btn btn-danger text-white" type="button" href="#" data-toggle="modal" data-target="#myModal2">S'inscrire</a>
+                        </li>
+                    </ul>
+                </div>
+        
+            <!--Modals toggle-->
+       <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+  
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Log-in Client</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+  
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <form class="row g-3 needs-validation" novalidate style="padding:0 15px;">
+                        <label class="sr-only" for="usrname">Username</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="E-mail" required>
+                            <div class="valid-feedback">
+                              Bon!
+                            </div>
+                          </div>
+                        <label class="sr-only" for="Password">Mot de passe</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="Password" type="password" class="form-control" placeholder="Mot de passe"  required>
+                            <div class="valid-feedback">
+                              Bon!
+                            </div>
+                          </div>
+                    </form> 
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Se connecter</button>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+      <div class="modal-dialog">
+          <div class="modal-content">
+  
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <h4 class="modal-title">S'inscrire</h4>
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+  
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="validationCustom01" required>
+                    <div class="valid-feedback">
+                      Bon!
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Prenom</label>
+                    <input type="text" class="form-control" id="validationCustom02" required>
+                    <div class="valid-feedback">
+                      Bon!
+                    </div>
+                  </div> 
+                  <div class="col-md-12">
+                    <label for="validationCustomUsername" class="form-label">E-mail</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Vérifiez votre e-mail!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="validationCustom01" required>
+                    <div class="valid-feedback">
+                      Bon!
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                      Entrez une ville!
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Accepter les termes de confidentialités
+                      </label>
+                      <div class="invalid-feedback">
+                        Vous devez accpeter avant de continuer.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">S'inscrire</button>
+                  </div>
+                </form>
+              </div>
+              <!-- Modal footer -->
+          </div>
+      </div>
+  </div>
+        <!--End of modals toggle-->
+            </nav>
+        </div>
+        <!--End of navbar-->
+        <!--Boooooooody-->
+        <!--col-md-4 col-xs-12-->
+        <div style="position: relative;display: block;margin-left: 10%;" >
+                <div class=" pull-left no-padding" style="border-radius:22px;padding:0 15px;width:89%;height:max-content;margin-top: 6px;background-image:url(img/bg.jpg);background-repeat: no-repeat;background-size:cover;">
+                    <div class="filter-block">
+                        <div class="block" id="recherche-voiture-accueil">
+                            <ul class="nav nav-tabs">
+<li class="activechoice" style="padding:10px;"id="old" onclick="clickchange2();">
+									<a href="#search-sales" data-toggle="tab"  >
+										<h2 style="font-size:17px;margin-top:1px;font-weight:bold;text-decoration: none;color: blanchedalmond;"> OCCASION</h2>
+                                    </a>
+                                </li>
+<li class="" style="padding:10px;" id="new" onclick="clickchange1();">
+										<a href="#search-rent" data-toggle="tab">
+											<h2 style="font-size:17px;margin-top:1px;font-weight:bold;text-decoration: none;color: blanchedalmond;">NEUF</h2>
+										</a>
+									</li>
+</ul>
+                            <div class="content">
+                                <div class="inner">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="search-sales">
+<form method="get" action="">
+	<div class="row" style="width: 40%;">
+		<div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12">
+			<select class="form-control" name="mark_id" style="background:rgba(255,255,255,0.6);" id="select_mark_search" required="" onChange="modeles();">	
+				<option title="Marque" value="0">Marque</option>
+        <option title="alfa-romeo"  value="1">ALFA-ROMEO</option>
+        <option title="audi"  value="2">AUDI</option>
+        <option title="bmw"  value="3">BMW</option>
+        <option title="citroen"  value="4">CITROEN</option>
+        <option title="dacia"  value="5">DACIA</option>
+        <option title="ford"  value="6">FORD</option>
+        <option title="hyundai"  value="7">HYUNDAI</option>
+        <option title="peugeot"  value="8">PEUGEOT</option>
+        <option title="renault"  value="9">RENAULT</option>
+        <option title="seat"  value="10">SEAT</option>
+        <option title="seat"  value="11">SKODA</option>
+        <option title="volkswagen"  value="12">VOLKSWAGEN</option>
+        <option disabled="disabled">-----------------------------</option>
+        </select>
+        </div>
+		<div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12">
+            <select class="form-control" name="modele" style="background:rgba(255,255,255,0.6);" id="selectmodelId" >
+                <option title="Modèle" value="0">Modèle</option>
+			</select>
+		</div>
+		            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6 year-to">
+                <select class="form-control" name="carburant" style="background:rgba(255,255,255,0.6);">
+					<option value="0">Carburant</option>
+												<option title="Essence" value="Essence">ESSENCE</option>
+												<option title="Diesel" value="Diesel">DIESEL</option>
+												<option title="Electrique" value="Electrique">ELECTRIQUE</option>
+												<option title="Hybride" value="Hybride">HYBRIDE</option>
+									</select>
+			</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6 year-to PriceHolder">
+			<input type="text" name="prix_max" style="background-color:rgba(255,255,255,0.6);" class="form-control" placeholder="Prix maxi (Dhs)" data-ph="Prix maxi (Dhs)">
+		</div>
+    </div>
+	<div class="form-group">
+		<button class="send  btn-primary in_progress_btn" style="font-size: 18px;font-weight: 100;background-color: #242424;" data-value="En cours ...">
+			Lancer la recherche  <i class="icon icon-normal-right-arrow-small"></i>
+		</button>
+	</div>
+</form>
+</div>
+<div class="tab-pane" id="search-rent" >
+<form method="get" action="" class="form-search">
+	<div class="row"  style="width: 40%;" id="new">
+    <div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12">
+			<select class="form-control" style="background-color:rgba(255,255,255,0.6);" name="modele" id="select_mark_search1" onchange="modeles2()" >
+				<option title="Modèle" value="0">Marque</option>
+        <option title="alfa-romeo"  value="1">ALFA-ROMEO</option>
+        <option title="audi"  value="2">AUDI</option>
+        <option title="bmw"  value="3">BMW</option>
+        <option title="citroen"  value="4">CITROEN</option>
+        <option title="dacia"  value="5">DACIA</option>
+        <option title="ford"  value="6">FORD</option>
+        <option title="hyundai"  value="7">HYUNDAI</option>
+        <option title="peugeot"  value="8">PEUGEOT</option>
+        <option title="renault"  value="9">RENAULT</option>
+        <option title="seat"  value="10">SEAT</option>
+        <option title="seat"  value="11">SKODA</option>
+        <option title="volkswagen"  value="12">VOLKSWAGEN</option>
+        <option disabled="disabled">-----------------------------</option>
+			</select>
+		</div>
+		<div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12">
+			<select class="form-control" style="background-color:rgba(255,255,255,0.6);" name="modele" id="selectmodelId1" >
+				<option title="Modèle" value="0">Modèle</option>
+			</select>
+		</div>
+	</div>
+		<div class="form-group">
+		<button class="send  btn-primary in_progress_btn" style="font-size: 18px;font-weight: 100;background-color: #242424;" data-value="En cours ...">
+			Lancer la recherche  </i>
+		</button>
+	</div>
+</form>
+<br>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+<!--Exclusif-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:300px;margin-left:auto;margin-right:auto;width:60%;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 " src="img/pub1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/pub2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/pub3.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--end of Exclusif-->
+<div id="defilee" >
+<marquee><a href="#">
+  <a href="#"><img src="img/renault.png" alt=""></a>
+  <a href="#"><img src="img/toyota.png" alt=""></a>
+  <a href="#"><img src="img/volvo.png" alt=""></a>
+  <a href="#"><img src="img/volkswagen.png" alt=""></a>
+    <a href="#"><img src="img/peugeot.png" alt=""></a>
+    <a href="#"><img src="img/mercedes.png" alt=""></a>
+    <a href="#"><img src="img/kia.png" alt=""></a>
+    <a href="#"><img src="img/mazda.png" alt=""></a>
+    <a href="#"><img src="img/jaguar.png" alt=""></a>
+    <a href="#"><img src="img/lexus.png" alt=""></a>
+    <a href="#"><img src="img/alfaromeo.png" alt=""></a>
+    <a href="#"><img src="img/isuzu.png" alt=""></a>
+    <a href="#"><img src="img/chevrolet.png" alt=""></a>
+    <a href="#"><img src="img/citroen.png" alt=""></a>
+    <a href="#"><img src="img/fiat.png" alt=""></a>
+    <a href="#"><img src="img/jeep.png" alt=""></a>
+
+</marquee>
+</div>
+ <!-- inventory section -->
+ <section class="inventory py-5" id="inventory">
+  <div class="container">
+    <!-- section title -->
+    <div class="row mb-5">
+      <div
+        class="col d-flex flex-wrap 
+            text-uppercase justify-content-center"
+            style="margin-top:15px ;"
+      >
+        <h1 class="font-weight-bold align-self-center mx-1">Derniers</h1>
+        <h1 class="section-title--special mx-1">Articles</h1>
+      </div>
+    </div>
+    <!-- end of section title -->
+   <!----> <div class="row mb-5">
+      <div class="col-10 mx-auto col-md-12 d-flex justify-content-end">
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="all">
+          Tout
+        </button>
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="false">
+          Neuves
+        </button>
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="true">
+          Occasions
+        </button>
+      </div>
+    </div>
+    <!-- cars -->
+    <div class="row car-inventory">
+      <!-- single car -->
+     
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" id="prev"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item" id="1"><a class="page-link " href="#">1</a></li>
+      <li class="page-item"  id="2"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"  id="3"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"  id="4"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"  id="next"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</section>
+<!-- end of inventory section -->
+        <!--End of Boooooooody-->
+        <!--Brands-->
+        
+        <!--end of Brands-->
+<!------------------Fooooooooooooooooooooooooooooooter----------------------->
+  <!-- Footer -->
+<footer class="bg-dark text-center text-white" style="width: 80%;margin-left: auto;margin-right: auto;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <div id="part1">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>S'abonner pour recevoir les actualités</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-dark mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Adresse E-mail </label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-dark mb-4">
+              S'abonner
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Annonces voiture au Maroc: toutes les voiture d'occasion Maroc à vendre sur Cars.ma le spécialiste des annonces de voitures au Maroc.
+        Retrouvez le guide d'achat de voiture neuve au Maroc: fiches techniques, prix, comparatif de prix neuf, Test Drive et essai de voiture neuve au Maroc.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Neuves</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">DACIA</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">AUDI</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">BMW</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">VOLKSWAGEN</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Occasions</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">LAND ROVER</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">JEEP</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">FORD</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">PORSCHE</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Sponsors</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">SHELL</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">AFRIQUIA</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">WINXO</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">TOTAL</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">PROMOS</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">RENAULT</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">DODGE</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">FORD</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">AUDI</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="index.html">Cars.ma</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->  
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!-- script js --><script src="js/script-vendre.js"></script>  
+        <script src="js/script-acheter.js"></script>
+      
+    </body>
+</html>

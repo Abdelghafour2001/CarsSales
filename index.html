@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--<script src="js/all.js"></script>-->
+    <title>Cars</title>
+    </head>
+    <body>
+      <!--Head-->
+     <!--<div id="anim-car"><span><img src="img/buyer.svg" alt="dealer"></span><span><img src="img/car.svg" alt="car"><img src="img/smoke.png" alt="smoke"></span><span><img src="img/dealer.svg" alt="dealer"></span></div>-->
+      <div id="connection-btns"><button type="button" class="btn btn-lg "data-toggle="modal" data-target="#myModal" >Se connecter</button>
+        <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal2" >S'inscrire</button></div>
+      <div id="title" onclick="location.href='main.html';"><h1>Cars</h1><h3>.ma</h3></div>
+      <!--End of Head-->
+      <!--Modals toggle-->
+       <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <h4 class="modal-title">Log-in Client</h4>
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <form class="row g-3 needs-validation" novalidate>
+                      <label class="sr-only" for="usrname">Username</label>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="E-mail" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                      <label class="sr-only" for="Password">Mot de passe</label>
+                      <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                          </div>
+                          <input id="Password" type="password" class="form-control" placeholder="Mot de passe"  required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                  </form> 
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Se connecter</button>
+                  </div>
+              </div>           
+          </div>
+      </div>
+  </div>
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">S'inscrire</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="validationCustom01" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom02" class="form-label">Prenom</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div> 
+                <div class="col-md-12">
+                  <label for="validationCustomUsername" class="form-label">E-mail</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Vérifiez votre e-mail!
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="validationCustom01" class="form-label">Mot de passe</label>
+                  <input type="password" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="validationCustom03" class="form-label">Ville</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Entrez une ville!
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                      Accepter les termes de confidentialités
+                    </label>
+                    <div class="invalid-feedback">
+                      Vous devez accpeter avant de continuer.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">S'inscrire</button>
+                </div>
+              </form>
+            </div>
+            <!-- Modal footer -->
+        </div>
+    </div>
+</div>
+      <!--End of modals toggle-->
+      <!--Description Paragraph-->
+      <div id="dp">
+        <h2>Cars.ma</h2>
+        <p>Annonces voiture au Maroc: toutes les voiture d'occasion Maroc à vendre sur Cars.ma le spécialiste des annonces de voitures au Maroc.
+          Retrouvez le guide d'achat de voiture neuve au Maroc: fiches techniques, prix, comparatif de prix neuf, Test Drive et essai de voiture neuve au Maroc.
+        </p>
+      </div>
+      <!-- End of Description P-->
+      <!--Types de services-->
+      <div id="types">
+          <!-- Acheter -->
+  <div
+    class="p-5 text-center bg-image" id="acheter"
+    style="
+      position: absolute;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      border-radius: 22px;
+      background-image: url('img/1.jpg');
+      width: 47%;
+      height: 80%;
+      overflow: hidden;
+    "
+  >
+    <div class="mask" style="margin-top:100px;padding:5px;background-color: transparent; border-radius: 10%;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3"style="font-weight: 700;margin-top: -30px;">Acheter</h1>
+          <h4 class="mb-3"style="margin-top: 40px;">Visitez pour voir nos derniers articles</h4>
+          <a class="btn btn-outline-light btn-lg" id="btnacheter" style="border-radius:50px;" href="acheter.html" role="button">Cliquer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Acheter -->
+         <!-- Vendre -->
+         <div
+         id="vendre"
+         class="p-5 text-center bg-image"
+         style="
+           position: absolute;
+           margin-top: 40px;
+           left: 690px;
+           margin-bottom: 15px;
+           border-radius: 22px;
+           background-image: url('img/2.jpg');
+           width: 47%;
+          height: 80%;
+           overflow: hidden;
+         "
+       >
+         <div class="mask" style="margin-top:100px;padding:5px;background-color: transparent; border-radius: 10%;">
+           <div class="d-flex justify-content-center align-items-center h-100">
+             <div class="text-white">
+               <h1 class="mb-3" style="font-weight: 700;margin-top: -50px;">Vendre</h1>
+               <h4 class="mb-3"style="margin-top: 60px;">Déposez vos propres articles</h4>
+               <a class="btn btn-outline-light btn-lg" id="btnvendre"style="border-radius:50px;"href="vendre.html" role="button">Cliquer</a>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+       <!-- End of Vendre-->
+       <!--Mobile App-->
+       <div id="m-app">
+          <h2>L'application Mobile</h2>
+          <p>Retrouvez notre application disponible gratuitement sur les plateformes IOS et Android</p><br>
+          <a class="btn btn-outline-light btn-lg" id="btnacheter" style="border-radius:50px;"href="#!" role="button"><img src="img/apple.svg" alt="apple">Télécharger l'app sur <span>APP STORE</span></a>
+          <a class="btn btn-outline-light btn-lg" id="btnacheter" style="border-radius:50px;"href="#!" role="button"><img src="img/android.svg" alt="android">Télécharger l'app sur <span>Google Play</span></a>
+          <span><img src="img/hand.png" alt="smartphone"></span>
+       </div>
+       <!--End Mobile App-->
+       <!--Footer-->
+       <div id="footer">
+          <div id="part1">
+            <span><img src="img/logo1.png" alt="logo"></span><br> 
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <div id="part2">
+            <h3>Nous contacter</h3>
+            <p><strong>Settat</strong>, 77, Rue des FAR Settat <strong>26000</strong><br>Maroc</p>
+            <p><strong>Telephone :</strong>+212700989156</p>
+            <a class="btn btn-outline-dark btn-lg" id="btnacheter" style="border-radius:50px;"href="#!" role="button">Itinéraire</a>
+          </div>
+          <div id="part3">
+            <h3>Nos Horaires</h3>
+            <span><p><strong>Matin :</strong>9:00-12:30</span></p><br>
+            <span><p><strong>Après-midi :</strong>13:45-16:45</p></span>
+            <span><p><strong>7/24</strong></p></span>
+          </div>
+          <!-- Footer -->
+<footer class="bg-light text-center text-black" >
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>S'abonner pour recevoir les actualités</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" placeholder="Adresse e-mail" />
+            </div>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-dark mb-4">
+              S'Abonner
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Annonces voiture au Maroc: toutes les voiture d'occasion Maroc à vendre sur Cars.ma le spécialiste des annonces de voitures au Maroc.
+          Retrouvez le guide d'achat de voiture neuve au Maroc: fiches techniques, prix, comparatif de prix neuf, Test Drive et essai de voiture neuve au Maroc.
+      </p>
+    </section>
+    <!-- Section: Text -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);border-radius: 22px;">
+    © 2021 Copyright:
+    <a class="text-black" href="#">abdels.cars.ma</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+       </div>
+       <!--End of footer-->
+      <!--End of types de services-->
+      <!-- jquery -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <!-- bootstrap js -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- script js -->
+      <script src="js/script-main.js"></script>
+    
+    </body>
+</html>
