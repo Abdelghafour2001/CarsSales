@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- index css -->
+    <link rel="stylesheet" href="css/vendre.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--<script src="js/all.js"></script>-->
+    <title>Vendre</title>
+    </head>
+    <body>
+        <!--Nav bar-->
+        <div class="container">
+            <div class="row"id="title" onclick="location.href='index.html';">
+                <h1>Cars</h1><h3>.ma</h3>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-radius: 22px;">
+                <a class="navbar-brand" id="home"href="index.html"><img src="img/home.svg" alt="home" width="35px" height="35px"> <span class="sr-only">(current)</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto topnav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="vendre.html">Deposez Vos annonces</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="acheter.html">Acheter une voiture</a>
+                      </li>
+                         
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="about.html">Contactez Nous</a>
+                        </li>
+                        <li class="nav-item connection-btns">
+                            <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>                  
+                        </li>
+                        <li class="nav-item connection-btns">
+                            <a class="nav-link btn btn-danger text-white" type="button" href="#" data-toggle="modal" data-target="#myModal2">Register</a>
+                        </li>
+                    </ul>
+                </div>
+        
+            <!--Modals toggle-->
+       <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+  
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Log-in Client</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+  
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <label class="sr-only" for="usrname">Username</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="E-mail" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                        <label class="sr-only" for="Password">Mot de passe</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="Password" type="password" class="form-control" placeholder="Mot de passe"  required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                    </form> 
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Se connecter</button>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+      <div class="modal-dialog">
+          <div class="modal-content">
+  
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <h4 class="modal-title">S'inscrire</h4>
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+  
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="validationCustom01" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Prenom</label>
+                    <input type="text" class="form-control" id="validationCustom02" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div> 
+                  <div class="col-md-12">
+                    <label for="validationCustomUsername" class="form-label">E-mail</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Vérifiez votre e-mail!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="validationCustom01" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                      Entrez une ville!
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Accepter les termes de confidentialités
+                      </label>
+                      <div class="invalid-feedback">
+                        Vous devez accpeter avant de continuer.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">S'inscrire</button>
+                  </div>
+                </form>
+              </div>
+              <!-- Modal footer -->
+          </div>
+      </div>
+  </div>
+        <!--End of modals toggle-->
+            </nav>
+        </div>
+        <!--End of navbar-->
+        <h2>Entrez les informations concernants votre voiture</h2>
+        <section class="vendre">
+             <!--Selling form-->
+        <div class="row" id="form2">
+          <div class="col-md-6 col-md-offset-3 no-padding">
+<div class="overview">
+                  <div class="tab-container" id="tab-container" data-easytabs="true">
+                    
+<div class="block-inner white block-shadow">
+                  <div id="insert_ad">
+                      <form action="https://www.moteur.ma/fr/frontpage/add" method="post" id="addads">
+
+
+                          <div class="form-section" id="section_car">
+                              <div class="row"> 																							
+
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class=" form-group">
+                                          <label>Marque </label>
+                                          <div class="controls">
+<select class="form-control" name="mark_id" id="select_mark_search" required="" onChange="modeles();">	
+<option title="marque" value=""></option>
+<option title="alfa-romeo"  value="1">ALFA-ROMEO</option>
+<option title="audi"  value="2">AUDI</option>
+<option title="bmw"  value="3">BMW</option>
+<option title="citroen"  value="4">CITROEN</option>
+<option title="dacia"  value="5">DACIA</option>
+<option title="ford"  value="6">FORD</option>
+<option title="hyundai"  value="7">HYUNDAI</option>
+<option title="peugeot"  value="8">PEUGEOT</option>
+<option title="renault"  value="9">RENAULT</option>
+<option title="seat"  value="10">SEAT</option>
+<option title="seat"  value="11">SKODA</option>
+<option title="volkswagen"  value="12">VOLKSWAGEN</option>
+<option disabled="disabled">-----------------------------</option>
+</select>
+
+                                          </div>
+
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group"> 
+
+                                          <label>Modèle </label>
+                                          <select class="form-control" name="model_id" id="selectmodelId"  required="">	
+                                              <option title="Sélectionnez un modèle" value=""></option>
+                                          </select>
+
+                                      </div>
+                                  </div>
+
+                              </div> 
+     <div class="row">
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                          <label for="name">Version</label><a href="#" data-toggle="modal" data-target="#myModalreport" class="write_version_description">
+                                              Comment trouver la version de votre voiture?                                                                </a>
+                                          <input type="text" id="vesrion" name="vesrion" class="form-control" value="">                                                             </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+   
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                          <label>Carburant </label>
+                                          <select class="form-control" name="fuel" id="fuel" required="">
+                                              <option></option>                                                                         <option title="Essence" value="1">
+                                                      Essence                                                                        </option>
+                                                                                                                      <option title="Diesel" value="2">
+                                                      Diesel                                                                        </option>
+                                                                                                                      <option title="Electrique" value="3">
+                                                      Electrique                                                                        </option>
+                                                                                                                      <option title="Hybride" value="4">
+                                                      Hybride                                                                        </option>
+                                               
+                                          </select>	
+
+                                      </div>
+                                  </div>
+                                                         
+       <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                                                                                              <label>Boite de vitesses </label>
+                                              <select class="form-control" name="box" id="box" required="">
+                                                  <option></option>                                                                             <option title="Manuelle" value="1">
+                                                          Manuelle                                                                            </option>
+                                                                                                                              <option title="Automatique" value="2">
+                                                          Automatique                                                                            </option>
+                                                                                                                      </select>
+                                              
+                                      </div>
+                                  </div>
+
+                              </div>
+                              <div class="row"> 
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                          <label>Année de la mise en circulation </label>
+                                          <select class="form-control" name="year" id="year" required="">
+                                              <option></option>         
+                                          </select>
+
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+<div class="row">
+<div class="col-sm-12 col-md-12">
+<div class="form-group">
+<label for="fiscal_power">Véhicule dédouané?</label>	
+<select class="form-control" id="customs" name="customs">
+<option id="customs_false" value="0">
+</option>
+<option id="customs_false" value="0">
+Non, acheté au maroc (ww)				</option>
+<option id="customs_true" value="1">
+Oui, dédouané				</option>
+<option id="customs_false" value="2">
+Pas encore dédouané				</option>
+<option id="customs_not_yet" value="5">
+Importé neuf				</option>
+</select>
+
+
+
+<select class="form-control yearcustoms" name="year_customs" id="year_customs" style="display:none;margin-top: 15px;">
+<option>Sélectionnez l'année</option>
+</select>	
+</div>
+</div>
+</div>
+                              <div class="row">
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                          <label for="km">Kilométrage</label>
+                                          <input type="text" id="km" name="km" class="form-control" value=""></div>
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                  <div class="col-sm-12 col-md-12"> 
+                                      <div class="form-group">
+                                          <label for="color" class="control-label">Couleur</label>
+                                          <select class="form-control" id="color" name="color"></select>
+                                      </div>
+                                  </div>
+                              </div>
+                                  <div class="row">
+                                      <div class="col-sm-12 col-md-12">
+                                          <div class="form-group">
+                                              <label for="number_door">Nombre de portes</label>
+                                              <select class="form-control" id="number_door" name="number_door">
+                                                  <option value="" selected="selected"></option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-sm-12 col-md-12">		
+                                          <div class="form-group">
+                                              <label for="fiscal_power">Puissance fiscale</label>		 
+                                              <select class="form-control" id="fiscal_power" name="fiscal_power">
+                                                  <option value="" selected="selected"></option>
+                                              </select>
+                                              </div>
+                                      </div>
+                                  </div>
+<div class="row">
+<div class="col-sm-12 col-md-12">
+<div class="form-group">
+<label for="first_use">
+Première index			</label>
+<select class="form-control" id="first_use" name="first_use">
+<option value="0">
+</option>
+<option value="0">
+Non					</option>
+<option value="1">
+Oui					</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12 col-md-12">
+<div class="form-group">
+<label for="modified_car">
+Voiture personnalisée (tuning)			</label>	
+<select class="form-control" id="modified_car" name="modified_car">
+<option value="0">
+</option>
+<option value="0">
+Non					</option>
+<option value="1">
+Oui					</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-12">
+<div class="form-group">
+<label for="car_warranty">
+Véhicule en garantie			</label>	
+<select class="form-control" id="car_warranty" name="car_warranty">
+<option value="0">
+</option>
+<option value="0">
+Non					</option>
+<option value="1">
+Oui					</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12 col-md-12">
+<div class="form-group durationwarranty" style="display:none;">
+<label for="year_customs">
+Garantie		</label>		 
+<div class="input-group">
+<input type="text" class="form-control" id="duration" name="duration_warranty" placeholder="Durée en mois">
+<span class="input-group-addon">
+Mois	    </span>
+</div>
+</div>
+</div>
+</div>
+
+                              <div class="row">
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                          <label>Options</label>
+                                          <br>
+          
+
+<div class="row rowOC only_desktop">
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="dvd" name="optionsCar[]" value="dvd">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="dvd">
+Dvd / cd / mp3							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="aluminum_rim" name="optionsCar[]" value="aluminum_rim">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="aluminum_rim">
+Jantes aluminium							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="alarm" name="optionsCar[]" value="alarm">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="alarm">
+Alarme							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="air_conditioning" name="optionsCar[]" value="air_conditioning">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="air_conditioning">
+Climatisation auto							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="abs" name="optionsCar[]" value="abs">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="abs">
+Abs							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="gps" name="optionsCar[]" value="gps">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="gps">
+Système de navigation / gps 							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="esp" name="optionsCar[]" value="esp">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="esp">
+Programme de stabilité électronique							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="xenon_headlamps" name="optionsCar[]" value="xenon_headlamps">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="xenon_headlamps">
+Projecteurs xenon							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="panoramic_sunroof" name="optionsCar[]" value="panoramic_sunroof">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="panoramic_sunroof">
+Toit ouvrant panoramique							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="heated_seat" name="optionsCar[]" value="heated_seat">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="heated_seat">
+Siège chauffant							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="electric_seat" name="optionsCar[]" value="electric_seat">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="electric_seat">
+Siége electrique							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="sport_seat" name="optionsCar[]" value="sport_seat">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="sport_seat">
+Siége sport							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="steering_wheel_sport" name="optionsCar[]" value="steering_wheel_sport">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="steering_wheel_sport">
+Volant sport							</label>
+</div>
+</div>
+</div>  
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="power_steering" name="optionsCar[]" value="power_steering">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="power_steering">
+Direction assistée							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="keyless" name="optionsCar[]" value="keyless">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="keyless">
+Keyless go							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="board_computer" name="optionsCar[]" value="board_computer">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="board_computer">
+Ordinateur de bord							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="radio_steering_wheel" name="optionsCar[]" value="radio_steering_wheel">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="radio_steering_wheel">
+Radio commande au volant							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="speed_regulator" name="optionsCar[]" value="speed_regulator">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="speed_regulator">
+Régulateur de vitesse							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="anti_fog" name="optionsCar[]" value="anti_fog">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="anti_fog">
+Anti brouillard							</label>
+</div>
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-1" style="margin-left:-7px;">  
+<input type="checkbox" class="checkbox_margin" id="auto_parking_brake" name="optionsCar[]" value="auto_parking_brake">
+</div>
+<div class="col-xs-11 col-md-10" style="line-height:19px!important;">  
+<label class="option_label" for="auto_parking_brake">
+Frein de parking automatique							</label>
+</div>
+</div>
+
+</div>
+</div>
+        </div>
+                                  </div>
+                              </div>
+                      <div class="row">
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+
+                                          <label>Prix</label>
+                                          <div class="input-group"> 
+
+                                              <input class="form-control" size="20" type="text" id="price" name="price" value=""> 
+                                              <span class="input-group-addon">
+Dhs     
+                                              </span>
+                                          </div>
+
+
+                                      </div>  
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-12 col-md-12">
+                                      <div class="form-group">
+                                          <label for="name" class="control-label">Votre nom </label>
+                                          <input type="text" id="name" name="name" class="form-control" value="" required="">
+
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Votre  n° de téléphone</label>
+                                          <input type="text" id="phone" name="phone" class="form-control" value="" required="">
+
+                                      </div> 
+
+                                  </div> 
+
+                                  <div class="col-sm-12 col-md-12"> 
+                                      <div class="form-group">
+                                          <label>Votre ville </label>
+
+                                          <select class="form-control" name="city" id="city" required="">
+                                              <option value=""></option>                                                  
+<option title="agadir" value="31">AGADIR</option>				            
+<option title="ait benhaddou" value="76">AIT BENHADDOU</option>				
+<option title="beni mellal" value="37">BENI MELLAL</option>				            
+<option title="berkane" value="38">BERKANE</option>				             
+<option title="berrechid" value="39">BERRECHID</option>				             
+<option title="bouskoura" value="40">BOUSKOURA</option>				             
+<option title="bouznika" value="41">BOUZNIKA</option>				            
+<option title="casablanca" value="27">CASABLANCA</option>				             
+<option title="chefchaouen" value="99">CHEFCHAOUEN</option>				             
+<option title="chemaia" value="100">CHEMAIA</option>				             
+<option title="chichaoua" value="101">CHICHAOUA</option>				             
+<option title="dakhla" value="102">DAKHLA</option>				            
+<option title="dar bouazza" value="42">DAR BOUAZZA</option>				                       
+<option title="laayoune" value="54">LAAYOUNE</option>				             
+<option title="lagouira" value="118">LAGOUIRA</option>				            
+<option title="larache" value="53">LARACHE</option>				             
+<option title="marrakech" value="55">MARRAKECH</option>				            
+<option title="martil" value="119">MARTIL</option>				            
+<option title="mediek ou mdiq" value="121">MEDIEK OU MDIQ</option>				
+<option title="mediouna" value="122">MEDIOUNA</option>				             
+<option title="mehdia" value="123">MEHDIA</option>				             
+<option title="meknes" value="56">MEKNES</option>				           
+<option title="oulad berhil" value="129">OULAD BERHIL</option>				            
+<option title="tamaris" value="68">TAMARIS</option>				
+<option title="tameslouht" value="92">TAMESLOUHT</option>				           
+<option title="tan-tan" value="90">TAN-TAN</option>				             
+<option title="temara" value="98">TEMARA</option>				            
+<option title="tetouan" value="71">TETOUAN</option>				           
+<option title="tiflet" value="73">TIFLET</option>				            
+<option title="tinghir" value="72">TINGHIR</option>				            
+<option title="tiznit" value="74">TIZNIT</option>				             
+<option title="youssoufia" value="108">YOUSSOUFIA</option>				             
+<option title="zagora" value="109">ZAGORA</option>				             
+<option title="autre" value="1">AUTRE</option>				
+</select>   
+
+                                      </div>
+                                  </div>
+
+
+                              </div>  
+                              <input class="form-control" size="20" type="hidden" id="type" name="type" value="0"> 
+</div></form>
+              </div>
+              <div id="update_ad">
+                  <form action="#" method="post" id="updateads">
+
+                      <div class="form-section" id="section_car">
+                          <div class="row"> <div class=" response1">
+
+                              </div> 
+                              <div class="col-sm-12 col-md-12 response">
+
+                              </div>
+                          </div> 
+
+                          <div class="row">
+                              <div class="col-sm-12 col-md-12">
+    
+<hr>	
+<div class="form-group">     
+<label>
+Photos : 
+</label>
+<span id="link_send_img" data-url="#"></span>
+<input type='file' onchange="readURL(this);" />
+<img id="blah" src="http://placehold.it/180" alt="your image" />
+</div> 
+<hr>
+                          <div class="row">
+                              <div class="col-sm-12 col-md-12">
+                                  <div class="form-group">
+                                      <label>Description : </label><a href="#" data-toggle="modal" data-target="#myModalDescription" class="write_version_description">
+                                              Voir exemple                                                                </a>
+                                      <textarea class="form-control" rows="3" cols="6" id="description" name="description"></textarea>
+                                  </div>
+                                  <p class="nophone-comment">Merci de ne pas mettre votre numéro de téléphone, dans le commentaire</p>
+                              </div>
+                          </div>
+                      </div> 
+                  </form>
+              </div>
+              <div id="connect">
+                  <form class="form-login" id="formlogin1" method="post" action="#">
+                      <div class="form-section">
+                          <div class="row"> <div class="col-sm-12 col-md-12 response2">
+
+                              </div> </div>  
+
+                          <div class="row">
+                              <div class="col-sm-12 col-md-12">
+                                  <div class="form-group">
+                                      <label>Téléphone ou E-mail</label>
+                                      <input type="text" id="pseudo" name="pseudo" class="form-control" value="" disabled="disabled">
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label>Mot de passe</label>
+
+                                      <div class="input-group">
+                                          <input type="password" id="password" name="password" class="form-control"> <span class="input-group-addon">
+                                              <i class="icon icon-normal-eye" style="font-size:18px;"></i>     
+                                          </span>
+                                      </div>
+
+                                  </div>
+                                  <div class="form-group">
+                                      <button class="btn btn-lg btn-primary btn-block" type="submit" id="login" data-value="En cours ...">Entrer                                                            </button>
+                                  </div>
+
+                                  <p class="url" style="float: right;color:#000;font-size: 13px !important;">
+<a href="#" target="_blank">Mot de passe oublié ?</a>                                                        </p>
+                              </div>
+                          </div>
+
+                  
+              </div></form>
+          </div>
+
+
+      </div>
+</div></div>
+  </div>
+  <!-- /.content -->
+
+<!-- /.col-md-12 -->
+</div>
+<!--End of selling -->
+        </section>
+        <footer class="text-center text-white" style="background-color: transparent;">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!-- Section: Iframe -->
+            <section class="">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                  <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PrqYohBV58o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Section: Iframe -->
+          </div>
+          <!-- Grid container -->
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);color:#000">
+            © 2021 Copyright:
+            <a class="text-black" href="https://mdbootstrap.com/">Cars.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- jquery -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- script js -->
+        <script src="js/script-vendre.js"></script>
+    </body>
+</html>
